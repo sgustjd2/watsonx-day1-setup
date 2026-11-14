@@ -89,5 +89,5 @@ uv/pip 다운로드가 막힌 Windows PC에서 씁니다. Releases 페이지(htt
 
 ## 확인한 것 / 미확인
 
-- 확인(Windows 11, 실제 화면 캡처는 Notion 페이지에 있음): 새로 받은 ZIP 풀기 → `install.ps1`, `git clone` → `install.ps1` 모두 설치와 `check_env.py`(✅ 9개, `.env`의 `WXO_*` ❌ 3개는 예상)까지 통과. `git pull`은 "Already up to date".
+- 확인(Windows 11, 위 화면은 실제 실행 화면): 새로 받은 ZIP 풀기 → `install.ps1`, `git clone` → `install.ps1` 모두 설치와 `check_env.py`(✅ 9개, `.env`의 `WXO_*` ❌ 3개는 예상)까지 통과. `git pull`은 "Already up to date".
 - 미확인: Mac 전 과정, 윈도우 SmartScreen/Defender 화면, 잠긴 회사 PC, `Unblock-File` 이후의 경고 변화.

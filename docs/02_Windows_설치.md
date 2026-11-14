@@ -7,7 +7,7 @@
 ## 0. 준비물
 - VS Code + 확장 **Python**(Microsoft)
 - 인터넷 연결 (약 100MB 다운로드, 2~5분). 막힌 회사망이면 맨 아래 "오프라인 설치"
-- 실습 폴더: 강사가 준 폴더(또는 `watsonx_setup.zip`을 푼 폴더). 이름·위치는 상관없습니다. OneDrive 밖(예: `C:\edu`)이 더 빠릅니다.
+- 실습 폴더: GitHub ZIP 을 푼 **안쪽 폴더**(`install.bat` 이 보이는 폴더), 강사가 준 폴더, 또는 `watsonx_setup.zip`을 푼 폴더. 이름·위치는 상관없습니다. OneDrive 밖(예: `C:\edu`)이 더 빠릅니다.
 - 파이썬·conda를 따로 설치할 필요는 **없습니다.**
 
 ## 1. VS Code로 폴더 열고 터미널 열기
