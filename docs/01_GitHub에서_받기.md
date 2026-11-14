@@ -19,7 +19,7 @@
 ## 방법 A — Download ZIP (기본)
 
 1. 저장소 페이지를 엽니다: https://github.com/sgustjd2/watsonx-day1-setup
-2. 초록색 **Code** 버튼 → **Download ZIP**. (`watsonx-day1-setup-main.zip`, 약 20KB)
+2. 초록색 **Code** 버튼 → **Download ZIP**. (`watsonx-day1-setup-main.zip`, 약 0.3MB)
 
 ![Code → Download ZIP](images/01_code_download_zip.png)
 3. **짧은 경로**에 압축을 풉니다. Windows는 `C:\edu`, Mac은 홈 폴더의 `edu`(`~/edu`)를 권합니다. 다운로드 폴더나 OneDrive 안은 경로가 길어 설치가 실패할 수 있습니다(약 100자 이상).
@@ -27,9 +27,8 @@
    - 이때 `watsonx-day1-setup-main` 폴더가 **두 겹**으로 생기는 것이 정상입니다(실제 화면에서 확인). **그 안에 `windows` 폴더와 `mac` 폴더가 보이는 안쪽 폴더**가 실습 폴더입니다.
 
    ![폴더 안에 폴더](images/02_zip_folder_in_folder.jpg)
-   ![안쪽 폴더](images/03_inner_folder_install_bat.jpg)
-
-   > 위 화면과 아래 일부 화면은 `install.bat`이 맨 위 폴더에 있던 **이전 구성**에서 찍었습니다. 동작은 같고, 지금은 `windows` 폴더 안에 `install.bat`이 있습니다.
+   ![안쪽 폴더: windows, mac 폴더](images/03_inner_folder.jpg)
+   ![windows 폴더 안: install.bat](images/03b_windows_folder.jpg)
 4. (Windows) 인터넷에서 받은 파일 경고: ZIP을 우클릭 → **속성** → 아래쪽 **차단 해제** 체크 → 확인한 뒤 압축을 풀면 경고가 줄어듭니다. 이미 풀었다면 PowerShell에서
    ```powershell
    Get-ChildItem C:\edu -Recurse | Unblock-File

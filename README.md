@@ -94,7 +94,7 @@ watsonx-day1-setup/                 ← VS Code 로 여는 폴더 (.venv, .env �
 ### 4-1. ZIP 받기
 
 1. 이 저장소 페이지(<https://github.com/sgustjd2/watsonx-day1-setup>)에서 초록색 **Code** 버튼 → **Download ZIP**.
-   파일 이름은 `watsonx-day1-setup-main.zip`(약 20KB)입니다.
+   파일 이름은 `watsonx-day1-setup-main.zip`(약 0.3MB)입니다.
 
    ![Code → Download ZIP](docs/images/01_code_download_zip.png)
 
@@ -105,9 +105,8 @@ watsonx-day1-setup/                 ← VS Code 로 여는 폴더 (.venv, .env �
 3. 같은 이름의 폴더가 **두 겹**으로 생기는 것이 정상입니다. **안쪽 폴더**(그 안에 `windows` 폴더, `mac` 폴더, `README.md`가 보이는 폴더)가 실습 폴더입니다.
 
    ![폴더 안에 폴더](docs/images/02_zip_folder_in_folder.jpg)
-   ![안쪽 폴더](docs/images/03_inner_folder_install_bat.jpg)
-
-   > 위 화면과 아래 일부 화면은 `install.bat`이 맨 위 폴더에 있던 **이전 구성**에서 찍었습니다. 동작은 같고, 지금은 `windows` 폴더 안에 `install.bat`이 있습니다.
+   ![안쪽 폴더: windows, mac 폴더](docs/images/03_inner_folder.jpg)
+   ![windows 폴더 안: install.bat](docs/images/03b_windows_folder.jpg)
 
 ### 4-3. install.bat 실행 (windows 폴더 안)
 
