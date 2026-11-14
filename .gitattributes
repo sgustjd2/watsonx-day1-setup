@@ -1,5 +1,10 @@
 *.sh text eol=lf
 *.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+*.lock text eol=lf
+.gitignore text eol=lf
+.env.example text eol=lf
 *.bat -text
 *.ps1 -text
 *.png binary
