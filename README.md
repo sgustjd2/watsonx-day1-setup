@@ -75,14 +75,14 @@ watsonx-day1-setup/
 |---|---|
 | 처음 설치한다 | 이 README의 [4장(Windows)](#4-windows-설치-자세히) 또는 [5장(Mac)](#5-mac-설치-자세히) |
 | 어떻게 받는지부터 모르겠다 | [docs/01_GitHub에서_받기.md](docs/01_GitHub에서_받기.md) |
-| 인터넷이 막혀 있다 (Windows) | [7장 오프라인 zip](#72-오프라인-zip-windows-전용) |
+| 인터넷이 막혀 있다 (Windows) | [7장 오프라인 zip](#7-2-오프라인-zip-windows-전용) |
 | 에러가 났다 | [8장 문제 해결](#8-문제-해결) |
 | 명령어만 빨리 보고 싶다 | [docs/04_명령어_요약.md](docs/04_명령어_요약.md) |
 
 ## 3. 시작 전 준비물
 
 - [ ] **VS Code** 설치 + 확장 **Python**(Microsoft). 설치 방법: <https://code.visualstudio.com>
-- [ ] **인터넷 연결** (설치 중 약 100MB 다운로드). 회사망이 막혀 있으면 [오프라인 zip](#72-오프라인-zip-windows-전용)
+- [ ] **인터넷 연결** (설치 중 약 100MB 다운로드). 회사망이 막혀 있으면 [오프라인 zip](#7-2-오프라인-zip-windows-전용)
 - [ ] **짧은 폴더 경로**: `C:\edu`(Windows) / `~/edu`(Mac). 다운로드 폴더나 OneDrive 안은 경로가 길어 설치가 실패할 수 있습니다(약 100자 이상). 실제로 약 120자 경로에서 설치가 실패하는 것을 확인했습니다.
 - [ ] 파이썬·conda·git·GitHub 계정은 **필요 없습니다.** (내 PC에 이미 있어도 상관없습니다)
 - [ ] 강사가 안내하는 **키 값**(`WXO_ENDPOINT_URL` 등)은 설치 후, 또는 14시 Agent 배포 후에 넣습니다.
@@ -298,7 +298,7 @@ cd ~/edu/watsonx-day1-setup
 | `스크립트를 실행할 수 없습니다` (실행 정책) | PowerShell 실행 정책 | `-ExecutionPolicy Bypass`를 붙여 실행 (`install.bat`은 이미 붙어 있음) |
 | 설치 중 `OSError ... No such file or directory` + 긴 경로 | Windows 경로 길이 제한(약 260자) | 폴더 경로를 짧게(`C:\edu`) 해서 다시 풀기. 스크립트가 경로가 100자를 넘으면 경고를 출력합니다 |
 | 화면에 `>> uv 를 쓸 수 없어(회사망 차단 등) PC 에 있는 파이썬으로 설치합니다` | uv 다운로드(astral.sh) 차단 | 정상 동작입니다. PC에 파이썬 3.11/3.12가 있으면 그것으로 자동 설치합니다 |
-| `사용할 수 있는 파이썬 3.12/3.11 이 없습니다. python.org 에서 3.12 설치 후 다시 실행하세요.` | uv도 막혔고 PC에 쓸 파이썬도 없음 | <https://www.python.org>에서 3.12 설치(**Add python.exe to PATH 체크**) 후 다시 실행. 또는 [오프라인 zip](#72-오프라인-zip-windows-전용) |
+| `사용할 수 있는 파이썬 3.12/3.11 이 없습니다. python.org 에서 3.12 설치 후 다시 실행하세요.` | uv도 막혔고 PC에 쓸 파이썬도 없음 | <https://www.python.org>에서 3.12 설치(**Add python.exe to PATH 체크**) 후 다시 실행. 또는 [오프라인 zip](#7-2-오프라인-zip-windows-전용) |
 | `>> requirements.lock 으로 설치하지 못해 requirements.txt 로 설치합니다` | 고정 버전을 이 PC에서 설치할 수 없음 | 자동으로 최신 호환 버전으로 설치합니다. 동작에는 보통 문제가 없습니다 |
 | `Failed to create virtual environment` | VS Code/터미널이 `.venv`를 쓰는 중 | VS Code와 터미널을 모두 닫고 폴더 탐색기에서 `install.bat` 다시 실행 |
 | `streamlit.exe`가 "애플리케이션 제어 정책"에 막힘 | 회사 보안 정책 | `python -m streamlit run app.py` (그리고 `python -m uvicorn app:api`) |
