@@ -1,0 +1,8 @@
+# 학생 실습 최소 패키지 (Python 3.11~3.12 권장 3.12, Windows/Mac). 출처는 Notion 'IBM watsonx Day1 실습 (11/20)' 학생용 페이지.
+streamlit>=1.40        # '6. 로컬 연동 — 칩 사진 판독'(chip_app.py), 예제11 화면 / 실행은 python -m streamlit run
+fastapi>=0.115         # 예제11 app.py 의 POST /ask API, (선택) 예제 07-W+
+uvicorn>=0.30          # 예제11 / 예제 07-W+ API 실행: python -m uvicorn app:api --reload
+requests>=2.32         # Orchestrate Endpoint 호출 (예제11 app.py, 6장 chip_app.py)
+python-dotenv>=1.0     # .env 읽기 (예제11 app.py, 6장 chip_app.py)
+httpx>=0.27            # 예제11 test_app.py(FastAPI TestClient) 전용. 점검을 안 돌리면 지워도 됨
+ibm-watsonx-orchestrate>=2.0  # 5장 센서점검 Tool(선택): orchestrate CLI(ADK). Python >=3.11
