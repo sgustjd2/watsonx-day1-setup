@@ -18,7 +18,7 @@ for mod in ["streamlit", "fastapi", "uvicorn", "requests", "dotenv", "httpx", "i
         importlib.import_module(mod)
         print(f"{OK} import {mod}")
     except ImportError:
-        print(f"{NO} import {mod}  → install.ps1(Windows) / bash install.sh(Mac) 를 다시 실행, 위 .venv 줄이 ❌ 면 먼저 인터프리터 선택")
+        print(f"{NO} import {mod}  → windows\\install.ps1(Windows) / bash mac/install.sh(Mac) 를 다시 실행, 위 .venv 줄이 ❌ 면 먼저 인터프리터 선택")
 
 try:
     from dotenv import load_dotenv

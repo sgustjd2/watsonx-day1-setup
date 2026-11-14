@@ -1,8 +1,8 @@
 #!/bin/bash
-# [Mac 학생용] 환경 구축 (폴더 이름/위치 무관). 실행: bash setup.sh
+# [Mac 학생용] 환경 구축 (폴더 이름/위치 무관). 실행: (루트에서) bash mac/setup.sh
 # wheelhouse-mac 폴더가 있으면 인터넷 없이 설치, 없거나 실패하면 인터넷으로 설치합니다.
 # 라이브러리 버전은 requirements.lock 에 고정되어 있고, lock 으로 설치하지 못하면 requirements.txt 로 설치합니다.
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."  # 스크립트는 mac/ 안에 있고, .venv/.env 등은 그 부모(루트)에 둡니다
 [ -d .venv ] || python3 -m venv .venv
 PY=.venv/bin/python
 done_=0

@@ -1,8 +1,9 @@
 ﻿# [학생용 Windows] 파이썬 3.12 + 패키지를 한 번에 설치합니다. 다른 버전의 파이썬이 깔려 있어도 상관없습니다.
 # 1순위: uv 가 3.12 를 받아 .venv 에만 씁니다. 2순위(uv 가 막히거나 실패하면): PC 에 이미 있는 3.12/3.11 로 .venv 를 만듭니다.
-# 실행: install.bat 더블클릭, 또는 powershell -ExecutionPolicy Bypass -File install.ps1
-Set-Location $PSScriptRoot
-if ($PSScriptRoot.Length -gt 100) { Write-Host ">> 폴더 경로가 깁니다($($PSScriptRoot.Length)자). Windows 경로 길이 제한 때문에 설치가 실패할 수 있습니다. C:\edu 처럼 짧은 경로로 옮겨 다시 실행하세요." }
+# 실행: windows 폴더의 install.bat 더블클릭, 또는 (루트에서) powershell -ExecutionPolicy Bypass -File windows\install.ps1
+$root = Split-Path $PSScriptRoot -Parent   # 스크립트는 windows\ 안에 있고, .venv/.env 등은 그 부모(루트)에 둡니다
+Set-Location $root
+if ($root.Length -gt 100) { Write-Host ">> 폴더 경로가 깁니다($($root.Length)자). Windows 경로 길이 제한 때문에 설치가 실패할 수 있습니다. C:\edu 처럼 짧은 경로로 옮겨 다시 실행하세요." }
 $env:PYTHONPATH = $null; $env:PYTHONHOME = $null   # 다른 파이썬 설정이 .venv 를 오염시키지 않게
 $py = ".\.venv\Scripts\python.exe"
 $ok = $false

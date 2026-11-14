@@ -1,8 +1,8 @@
 #!/bin/bash
-# [학생용 Mac] 파이썬 3.12 + 패키지를 한 번에 설치합니다. 다른 버전의 파이썬이 있어도 상관없습니다. 실행: bash install.sh
+# [학생용 Mac] 파이썬 3.12 + 패키지를 한 번에 설치합니다. 다른 버전의 파이썬이 있어도 상관없습니다. 실행: (루트에서) bash mac/install.sh
 # 1순위: uv 가 3.12 를 받아 .venv 에만 씁니다. 2순위(uv 가 막히거나 실패하면): PC 에 이미 있는 3.12/3.11 로 .venv 를 만듭니다.
 # 라이브러리 버전은 requirements.lock 에 고정되어 있고, lock 으로 설치하지 못하면 requirements.txt 로 설치합니다.
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."  # 스크립트는 mac/ 안에 있고, .venv/.env 등은 그 부모(루트)에 둡니다
 unset PYTHONPATH PYTHONHOME   # 다른 파이썬 설정이 .venv 를 오염시키지 않게
 ok=0
 LOCKMSG=">> requirements.lock 으로 설치하지 못해 requirements.txt 로 설치합니다"
