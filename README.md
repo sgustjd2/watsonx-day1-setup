@@ -271,7 +271,7 @@ cd ~/edu/watsonx-day1-setup
 
 회사망이 설치 중 다운로드(uv/pip)를 막는 **Windows** PC에서 씁니다.
 
-1. [Releases](https://github.com/sgustjd2/watsonx-day1-setup/releases/tag/v1)의 **Assets**에서 `watsonx_setup.zip`(약 92MB)을 받습니다.
+1. [Releases](https://github.com/sgustjd2/watsonx-day1-setup/releases/tag/v1)의 **Assets**에서 `watsonx_setup.zip`(약 97MB (GitHub 화면에는 92.6MB로 표시될 수 있음))을 받습니다.
 
    ![Releases Assets](docs/images/08_release_assets.png)
 

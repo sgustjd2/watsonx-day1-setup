@@ -86,15 +86,15 @@ python -m uvicorn app:api --reload
 | 증상 | 해결 |
 |---|---|
 | `xcode-select` / 컴파일 오류 | `xcode-select --install` 후 3단계 다시 |
-| uv 다운로드(astral.sh)가 막히거나 uv가 실패 | 자동으로 Mac의 파이썬 3.12/3.11로 설치합니다. 인터넷 자체가 막혔다면 아래 "오프라인 설치" |
+| uv 다운로드(astral.sh)가 막히거나 uv가 실패 | 자동으로 Mac의 파이썬 3.12/3.11로 설치합니다. 인터넷 자체가 막혔다면 Mac은 오프라인 설치를 지원하지 않으므로 강사에게 키트 USB 사본과 도움을 요청하세요 |
 | `사용할 수 있는 파이썬 3.12/3.11 이 없습니다. python.org 에서 3.12 설치 후 다시 실행하세요.` | uv도 막혔고 쓸 파이썬도 없는 경우. python.org에서 3.12 설치 후 `bash mac/install.sh` 다시 |
 | `python: command not found` | 5단계에서 `.venv` 선택 후 새 터미널, 또는 `.venv/bin/python` 사용 |
 | `ModuleNotFoundError` | 8장의 증상 확인 |
 | 터미널 앞에 `(base)` | `conda deactivate` |
-| pip 타임아웃/프록시·SSL | 회사망 설정 문제. 강사에게 문의, 오프라인 설치 사용 |
+| pip 타임아웃/프록시·SSL | 회사망 설정 문제. 강사에게 문의(Mac은 오프라인 설치 미지원, 강사의 USB 사본과 도움을 요청) |
 
-## 10. 오프라인 설치 (대체 방법)
-**오프라인 패키지 묶음은 Windows용만 있습니다. Mac은 오프라인 설치를 지원하지 않습니다.** zip을 받아도 Mac에서는 `mac/setup.sh`가 인터넷에서 `requirements.lock` 버전대로 설치합니다(미확인: 실제 Mac 실행).
+## 10. 인터넷이 막힌 경우 (Mac은 오프라인 설치 미지원)
+**오프라인 패키지 묶음은 Windows용만 있습니다. Mac은 오프라인 설치를 지원하지 않습니다.** zip을 받아도 Mac에서는 `bash mac/setup.sh`가 **인터넷이 연결되어 있을 때만** 동작하며, `requirements.lock` 버전대로 설치합니다(미확인: 실제 Mac 실행). 인터넷이 막혀 있으면 강사에게 키트 USB 사본과 도움을 요청하세요.
 - zip을 풀고 그 폴더를 VS Code로 연 뒤 `bash mac/setup.sh`
 - 직접 설치: python.org에서 3.12 설치 → `python3.12 -m venv .venv` → `.venv/bin/python -m pip install -r requirements.lock` → 4~7단계
 - 파이썬 버전·칩(Apple Silicon/Intel)이 zip의 패키지 묶음과 다르면 자동으로 인터넷 설치로 넘어갑니다.

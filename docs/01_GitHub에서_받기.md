@@ -66,7 +66,7 @@ cd ~/edu/watsonx-day1-setup
 
 ## 오프라인 zip (Windows 전용)
 
-uv/pip 다운로드가 막힌 Windows PC에서 씁니다. Releases 페이지(https://github.com/sgustjd2/watsonx-day1-setup/releases/tag/v1)의 **Assets** 에서 `watsonx_setup.zip`(약 92MB)을 받습니다.
+uv/pip 다운로드가 막힌 Windows PC에서 씁니다. Releases 페이지(https://github.com/sgustjd2/watsonx-day1-setup/releases/tag/v1)의 **Assets** 에서 `watsonx_setup.zip`(약 97MB (GitHub 화면에는 92.6MB로 표시될 수 있음))을 받습니다.
 
 - 설치 스크립트와 라이브러리 패키지(`wheelhouse-win`, 버전은 `requirements.lock`에 고정)가 함께 들어 있어 인터넷 없이 설치됩니다.
 - 짧은 경로(`C:\edu`)에 풀고, `windows` 폴더의 `setup.bat`을 더블클릭합니다.
