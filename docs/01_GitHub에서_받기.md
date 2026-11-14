@@ -20,19 +20,26 @@
 
 1. 저장소 페이지를 엽니다: https://github.com/sgustjd2/watsonx-day1-setup
 2. 초록색 **Code** 버튼 → **Download ZIP**. (`watsonx-day1-setup-main.zip`, 약 20KB)
+
+![Code → Download ZIP](images/01_code_download_zip.png)
 3. **짧은 경로**에 압축을 풉니다. Windows는 `C:\edu`, Mac은 홈 폴더의 `edu`(`~/edu`)를 권합니다. 다운로드 폴더나 OneDrive 안은 경로가 길어 설치가 실패할 수 있습니다(약 100자 이상).
-   - Windows: ZIP 파일을 우클릭 → **모두 압축 풀기** 로 충분합니다(별도 프로그램 불필요).
-   - 압축을 풀면 `watsonx-day1-setup-main` 폴더가 생깁니다. **그 안에 `install.bat`이 보이는 폴더**가 실습 폴더입니다. 폴더 안에 같은 이름 폴더가 또 있으면 안쪽 폴더를 쓰세요.
+   - Windows: ZIP 파일을 한 번 클릭하면 위쪽 도구 모음에 **압축 풀기**가 나타납니다(우클릭 → **모두 압축 풀기** 도 같습니다). 대화상자에서 **압축 풀기**를 누릅니다. 별도 프로그램은 필요 없습니다.
+   - 이때 `watsonx-day1-setup-main` 폴더가 **두 겹**으로 생기는 것이 정상입니다(실제 화면에서 확인). **그 안에 `install.bat`이 보이는 안쪽 폴더**가 실습 폴더입니다.
+
+   ![폴더 안에 폴더](images/02_zip_folder_in_folder.jpg)
+   ![안쪽 폴더의 install.bat](images/03_inner_folder_install_bat.jpg)
 4. (Windows) 인터넷에서 받은 파일 경고: ZIP을 우클릭 → **속성** → 아래쪽 **차단 해제** 체크 → 확인한 뒤 압축을 풀면 경고가 줄어듭니다. 이미 풀었다면 PowerShell에서
    ```powershell
    Get-ChildItem C:\edu -Recurse | Unblock-File
    ```
-   `install.bat`을 열 때 **Windows의 PC 보호(SmartScreen)** 창이 뜨면 **추가 정보 → 실행**을 누릅니다(미확인: 이 창은 직접 보지 못했습니다).
+   `install.bat`을 더블클릭하면 인터넷에서 받은 파일이라 **파일 열기 - 보안 경고**('게시자를 확인하지 못했습니다')가 뜹니다. **실행**을 누르면 됩니다(실제 화면에서 확인). 파란 **Windows의 PC 보호(SmartScreen)** 창은 이 PC에서 나타나지 않았고, 뜨는 PC에서는 **추가 정보 → 실행**입니다(미확인).
+
+   ![보안 경고](images/04_security_warning.jpg)
 5. VS Code로 실습 폴더를 엽니다(`File > Open Folder`).
 6. 설치:
    - **Windows:** 폴더의 `install.bat` 더블클릭 (또는 VS Code 터미널에 `powershell -ExecutionPolicy Bypass -File install.ps1`)
    - **Mac:** VS Code 터미널에 `bash install.sh`
-7. 이후 `.env` 채우기 → `.venv` 인터프리터 선택 → 점검은 OS별 가이드를 따릅니다: `설치가이드_Windows.md` / `설치가이드_Mac.md`
+7. 이후 `.env` 채우기 → `.venv` 인터프리터 선택 → 점검은 OS별 가이드를 따릅니다: `02_Windows_설치.md` / `03_Mac_설치.md`
 
 ## 방법 B — git clone (git이 이미 있을 때)
 
@@ -82,5 +89,5 @@ uv/pip 다운로드가 막힌 Windows PC에서 씁니다. Releases 페이지(htt
 
 ## 확인한 것 / 미확인
 
-- 확인(Windows 11): 새로 받은 ZIP 풀기 → `install.ps1`, `git clone` → `install.ps1` 모두 설치와 `check_env.py`(✅ 9개, `.env`의 `WXO_*` ❌ 3개는 예상)까지 통과. `git pull`은 "Already up to date".
+- 확인(Windows 11, 실제 화면 캡처는 Notion 페이지에 있음): 새로 받은 ZIP 풀기 → `install.ps1`, `git clone` → `install.ps1` 모두 설치와 `check_env.py`(✅ 9개, `.env`의 `WXO_*` ❌ 3개는 예상)까지 통과. `git pull`은 "Already up to date".
 - 미확인: Mac 전 과정, 윈도우 SmartScreen/Defender 화면, 잠긴 회사 PC, `Unblock-File` 이후의 경고 변화.

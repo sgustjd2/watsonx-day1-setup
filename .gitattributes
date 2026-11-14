@@ -1,3 +1,6 @@
 *.sh text eol=lf
+*.md text eol=lf
 *.bat -text
 *.ps1 -text
+*.png binary
+*.jpg binary
