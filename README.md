@@ -16,6 +16,7 @@ IBM watsonx Day1 실습(Orchestrate Agent + 내 PC의 Streamlit/FastAPI 예제)�
 ## 가이드
 
 - 화면 포함 단계별 안내(Notion): **개발환경 세팅 — Windows** / **개발환경 세팅 — Mac** (링크는 강사가 안내하는 실습 페이지에 있습니다)
+- GitHub 에서 받는 방법(ZIP / git clone / 오프라인 zip / 자주 나는 에러): [설치가이드_GitHub.md](설치가이드_GitHub.md)
 - 이 저장소의 문서: [설치가이드.md](설치가이드.md) · [설치가이드_Windows.md](설치가이드_Windows.md) · [설치가이드_Mac.md](설치가이드_Mac.md) · [설치_명령어_요약.md](설치_명령어_요약.md)
 
 ## 오프라인 설치 (인터넷이 막힌 PC, Windows 전용)
