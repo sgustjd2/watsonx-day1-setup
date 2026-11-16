@@ -45,5 +45,5 @@ if (-not $ok) {
     Write-Host "`n>> PC 의 파이썬 $ver 로 설치했습니다"
 }
 
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+if (-not (Test-Path .env)) { if (Test-Path .env.example) { Copy-Item .env.example .env } else { Set-Content .env -Value "WXO_ENDPOINT_URL=","WXO_AGENT_ID=","WXO_API_KEY=" -Encoding ascii } }
 & $py check_env.py

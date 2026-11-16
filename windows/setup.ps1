@@ -16,6 +16,6 @@ if (-not $done) {
     & $py -m pip install -r requirements.lock
     if ($LASTEXITCODE -ne 0) { Write-Host "`n>> requirements.lock 으로 설치하지 못해 requirements.txt 로 설치합니다"; & $py -m pip install -r requirements.txt }
 }
-if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+if (-not (Test-Path .env)) { if (Test-Path .env.example) { Copy-Item .env.example .env } else { Set-Content .env -Value "WXO_ENDPOINT_URL=","WXO_AGENT_ID=","WXO_API_KEY=" -Encoding ascii } }
 & $py check_env.py
 Write-Host "`n다음: .env 에 키 입력 → VS Code 로 이 폴더 열기 → Python: Select Interpreter 에서 .venv 선택"

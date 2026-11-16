@@ -37,5 +37,5 @@ if [ "$ok" -eq 0 ]; then
   echo; echo ">> PC 의 파이썬 $("$PY" --version 2>&1 | cut -d' ' -f2) 로 설치했습니다"
 fi
 
-[ -f .env ] || cp .env.example .env
+[ -f .env ] || { [ -f .env.example ] && cp .env.example .env || printf 'WXO_ENDPOINT_URL=%s\nWXO_AGENT_ID=%s\nWXO_API_KEY=%s\n' '' '' '' > .env; }
 .venv/bin/python check_env.py

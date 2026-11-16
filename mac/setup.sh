@@ -17,6 +17,6 @@ if [ "$done_" -eq 0 ]; then
     "$PY" -m pip install -r requirements.txt
   fi
 fi
-[ -f .env ] || cp .env.example .env
+[ -f .env ] || { [ -f .env.example ] && cp .env.example .env || printf 'WXO_ENDPOINT_URL=%s\nWXO_AGENT_ID=%s\nWXO_API_KEY=%s\n' '' '' '' > .env; }
 "$PY" check_env.py
 echo; echo "다음: .env 에 키 입력 → VS Code 로 이 폴더 열기 → Python: Select Interpreter 에서 .venv 선택"
