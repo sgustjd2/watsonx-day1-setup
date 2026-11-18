@@ -46,4 +46,5 @@ if (-not $ok) {
 }
 
 if (-not (Test-Path .env)) { if (Test-Path .env.example) { Copy-Item .env.example .env } else { Set-Content .env -Value "WXO_ENDPOINT_URL=","WXO_AGENT_ID=","WXO_API_KEY=" -Encoding ascii } }
+if (-not (Test-Path .vscode\settings.json)) { New-Item -ItemType Directory -Force .vscode | Out-Null; Set-Content .vscode\settings.json -Value '{"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe", "python.terminal.activateEnvironment": true}' -Encoding ascii }  # 이 폴더를 VS Code 로 열면 .venv 자동 선택
 & $py check_env.py

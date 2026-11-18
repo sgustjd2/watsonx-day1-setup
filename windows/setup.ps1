@@ -17,5 +17,6 @@ if (-not $done) {
     if ($LASTEXITCODE -ne 0) { Write-Host "`n>> requirements.lock 으로 설치하지 못해 requirements.txt 로 설치합니다"; & $py -m pip install -r requirements.txt }
 }
 if (-not (Test-Path .env)) { if (Test-Path .env.example) { Copy-Item .env.example .env } else { Set-Content .env -Value "WXO_ENDPOINT_URL=","WXO_AGENT_ID=","WXO_API_KEY=" -Encoding ascii } }
+if (-not (Test-Path .vscode\settings.json)) { New-Item -ItemType Directory -Force .vscode | Out-Null; Set-Content .vscode\settings.json -Value '{"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe", "python.terminal.activateEnvironment": true}' -Encoding ascii }  # 이 폴더를 VS Code 로 열면 .venv 자동 선택
 & $py check_env.py
 Write-Host "`n다음: .env 에 키 입력 → VS Code 로 이 폴더 열기 → Python: Select Interpreter 에서 .venv 선택"

@@ -38,4 +38,5 @@ if [ "$ok" -eq 0 ]; then
 fi
 
 [ -f .env ] || { [ -f .env.example ] && cp .env.example .env || printf 'WXO_ENDPOINT_URL=%s\nWXO_AGENT_ID=%s\nWXO_API_KEY=%s\n' '' '' '' > .env; }
+[ -f .vscode/settings.json ] || { mkdir -p .vscode && echo '{"python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python", "python.terminal.activateEnvironment": true}' > .vscode/settings.json; }  # 이 폴더를 VS Code 로 열면 .venv 자동 선택
 .venv/bin/python check_env.py

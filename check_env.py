@@ -25,6 +25,12 @@ try:
     load_dotenv()
 except ImportError:
     pass
-for key in ["WXO_ENDPOINT_URL", "WXO_AGENT_ID", "WXO_API_KEY"]:
-    print(f"{OK if os.environ.get(key) else NO} .env {key}")
-print("\n※ WXO_* 는 14시 Agent 배포 후에 채워도 됩니다.")
+for title, keys in [
+    ("구역 A (Orchestrate 호출, 14시 이후)", [("WXO_ENDPOINT_URL", ""), ("WXO_API_KEY", ""), ("WXO_AGENT_ID", "  → 아직이면 정상 (15시에 채움)")]),
+    ("구역 B (이미지 설명, 예제 13·15시 사진 첨부)", [("WATSONX_URL", "  → 아직이면 정상"), ("WATSONX_API_KEY", "  → 아직이면 정상"), ("WATSONX_PROJECT_ID", "  → 아직이면 정상")]),
+]:
+    print(f"\n{title}")
+    for key, note in keys:  # 값은 출력하지 않고 채워졌는지만 본다
+        ok = bool(os.environ.get(key))
+        print(f"{OK if ok else NO} .env {key}" + ("" if ok else note))
+print("\n※ 구역 A 의 URL·API 키는 14시 시작 전, WXO_AGENT_ID 는 15시, 구역 B 는 예제 13·15시 사진 첨부 때 채웁니다. 저장 후 앱·터미널을 다시 켜야 반영됩니다.")
